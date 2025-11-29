@@ -16,7 +16,8 @@ Spots is a photo-sharing website where users can edit their profiles and add new
 
 This webpage is deployed to GitHub Pages 
 
-- Deployment link: 
+- [Deployment link:](https://sebasco-coder.github.io/se_project_spots/)
+
 
 
 
