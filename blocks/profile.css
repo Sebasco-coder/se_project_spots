@@ -59,6 +59,11 @@ gap: 8px;
 
 }
 
+.profile__edit-btn:hover {
+  opacity: 0.6;
+  
+}
+
 .profile__add-btn {
     margin-left: auto;
     background-color: black;
@@ -73,13 +78,17 @@ gap: 8px;
     justify-content: center;
     gap: 8px;
 
+}
 
+.profile__add-btn:hover {
+  opacity: 0.6;
+  
 }
 
 @media screen and (max-width: 627px) {
     .profile {
         flex-direction: column;
-        max-width: 200px;
+        max-width: 288px;
         align-items: center;
         justify-content: center;
         padding: 20px; 
