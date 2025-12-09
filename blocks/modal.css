@@ -24,6 +24,7 @@
     background-color: #fff;
     padding: 32px 50px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .modal__close-btn {
@@ -36,6 +37,12 @@
    border: none;
 
 }
+
+.modal__close-btn:hover {
+    background-color: #f0f0f0;
+    opacity: 0.8;
+}
+
 
 .modal__title {
     margin: 0 0 32px;
@@ -69,6 +76,13 @@
     font-size: 20px; 
     color: rgba(33, 33, 33, 0.3); 
     padding: 0 16px 0 12px;
+    border: 1px solid rgba(33, 33, 33, 0.4);
+}
+
+.modal__input:hover {
+    border-color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .modal__submit-btn {
@@ -79,6 +93,12 @@
     max-width: 156px;
     width: 100%;
     border: none;
+}
+
+.modal__submit-btn:hover {
+    background-color: #333; 
+    opacity: 0.8; 
+
 }
 
 .modal__input::placeholder {
