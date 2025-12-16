@@ -13,7 +13,7 @@
 
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; 
 }
     
 
@@ -36,9 +36,7 @@
 
     transform: translateY(20px) scale(0.98);
     opacity: 0;
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
+
 }
 
 .modal_is-opened .modal__container {
@@ -58,8 +56,8 @@
 }
 
 .modal__close-btn:hover {
-    background-color: #f0f0f0;
     opacity: 0.8;
+
 }
 
 
@@ -124,8 +122,8 @@
     color: #2121214D
 }
 
-#card-image-input,
-#new-post-caption-input {
+
+.modal__input_caption {
     color: #000;
 }
 
