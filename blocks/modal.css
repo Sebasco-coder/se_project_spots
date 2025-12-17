@@ -1,146 +1,132 @@
 .modal {
-     visibility: hidden;
-    background-color: #00000080; 
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding: 10px;
+  visibility: hidden;
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s; 
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
-    
 
 .modal_is-opened {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-     transition-delay: 0s;
-
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
 }
 
 .modal__container {
-    max-width: 730px;
-    width: 100%;
-    border-radius: 8px;
-    background-color: #fff;
-    padding: 32px 50px;
-    position: relative;
-    box-sizing: border-box;
-
-    transform: translateY(20px) scale(0.98);
-    opacity: 0;
-
-}
-
-.modal_is-opened .modal__container {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+  max-width: 730px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 32px 50px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {
-   position: absolute;
-   top: 32px;
-   right: 50px;
-   width: 40px;
-   height: 40px;
-   background-color: transparent;
-   border: none;
-
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
 }
 
 .modal__close-btn:hover {
-    opacity: 0.8;
-
+  opacity: 0.8;
 }
 
-
 .modal__title {
-    margin: 0 0 32px;
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 32px;
-
+  margin: 0 0 32px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .modal__form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal__label {
-    margin: 0 0 32px;
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 16px;
-    color: rgba(33, 33, 33, 0.7);
-
+  margin: 0 0 32px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(33, 33, 33, 0.7);
 }
 
 .modal__input {
-    display: block;
-    margin: 8px 0 0;
-    width: 100%;
-    font-family: Poppins; 
-    border-radius: 8px;
-    height: 52px;
-    font-size: 20px; 
-    padding: 0 16px 0 12px;
-    border: 1px solid rgba(33, 33, 33, 0.4);
-    color: #000;
+  display: block;
+  margin: 8px 0 0;
+  width: 100%;
+  font-family: Poppins;
+  border-radius: 8px;
+  height: 52px;
+  font-size: 20px;
+  padding: 0 16px 0 12px;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  color: #000;
 }
 
 .modal__input:hover {
-    border-color: #333;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-color: #333;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .modal__submit-btn {
-    background-color: black;
-    color: #fff;
-    border-radius: 8px;
-    height: 52px;
-    max-width: 156px;
-    width: 100%;
-    border: none;
+  background-color: black;
+  color: #fff;
+  border-radius: 8px;
+  height: 52px;
+  max-width: 156px;
+  width: 100%;
+  border: none;
 }
 
 .modal__submit-btn:hover {
-    background-color: #333; 
-    opacity: 0.8; 
-
+  background-color: #333;
+  opacity: 0.8;
 }
 
 .modal__input::placeholder {
-    color: #2121214D
+  color: #2121214d;
 }
-
 
 .modal__input_caption {
-    color: #000;
+  color: #000;
 }
 
-
 @media screen and (max-width: 627px) {
-    .modal__title {
-        font-size: 20px;
+  .modal__title {
+    font-size: 20px;
+  }
 
-    }
+  .modal__input {
+    font-size: 16px;
+  }
 
-    .modal__input {
-        font-size: 16px;
+  .modal__submit-btn {
+    width: 100%;
+  }
 
-    }
+  .modal__label {
+    font-size: 16px;
+  }
 
-    .modal__label {
-        font-size: 16px;
-    }
-
+  .modal__container {
+    padding: 12px;
+  }
 }
