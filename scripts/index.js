@@ -62,9 +62,9 @@ function closeModal(modal) {
 }
 
 editProfileBtn.addEventListener("click", () => {
-  openModal(editProfileModal);
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  openModal(editProfileModal);
 });
 
 editProfileForm.addEventListener("submit", (e) => {
