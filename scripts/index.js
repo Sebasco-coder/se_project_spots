@@ -72,7 +72,6 @@ function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
-
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
 
@@ -126,12 +125,14 @@ newPostBtn.addEventListener("click", () => {
 newPostForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   const inputValues = {
-    name: newPostCaptionInput.value,
-    link: newPostImageInput.value,
+    name: newPostCaptionInput.value.trim(),
+    link: newPostImageInput.value.trim(),
   };
+  if (!inputValues.name || !inputValues.link) return;
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(newPostModal);
+  newPostForm.reset();
 });
 
 newPostCloseBtn.addEventListener("click", () => closeModal(newPostModal));

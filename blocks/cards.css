@@ -17,6 +17,7 @@
 
 @media screen and (max-width: 627px) {
   .cards__list {
-    grid-template-columns: repeat(auto-fit, 288px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 288px));
+    justify-content: center;
   }
 }
