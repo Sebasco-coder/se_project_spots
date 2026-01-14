@@ -68,6 +68,18 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach(function (modal) {
+  modal.addEventListener("click", handleClickClose);
+});
+
+function handleClickClose(event) {
+  if (event.target.classList.contains("modal")) {
+    closeModal(event.target);
+  }
+}
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -124,11 +136,6 @@ editProfileCloseBtn.addEventListener("click", () => {
 });
 
 newPostBtn.addEventListener("click", () => {
-  newPostImageInput.value = "";
-  newPostCaptionInput.value = "";
-
-  resetValidation(newPostForm, [newPostImageInput, newPostCaptionInput]);
-
   openModal(newPostModal);
 });
 
