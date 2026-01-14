@@ -102,6 +102,13 @@ function getCardElement(data) {
 editProfileBtn.addEventListener("click", () => {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+
+  resetValidation(
+    editProfileForm,
+    [editProfileNameInput, editProfileDescriptionInput],
+    settings
+  );
+
   openModal(editProfileModal);
 });
 
@@ -112,32 +119,43 @@ editProfileForm.addEventListener("submit", (evt) => {
   closeModal(editProfileModal);
 });
 
-editProfileCloseBtn.addEventListener("click", () =>
-  closeModal(editProfileModal)
-);
+editProfileCloseBtn.addEventListener("click", () => {
+  closeModal(editProfileModal);
+});
 
 newPostBtn.addEventListener("click", () => {
-  openModal(newPostModal);
   newPostImageInput.value = "";
   newPostCaptionInput.value = "";
+
+  resetValidation(newPostForm, [newPostImageInput, newPostCaptionInput]);
+
+  openModal(newPostModal);
 });
 
 newPostForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
+
   const inputValues = {
     name: newPostCaptionInput.value.trim(),
     link: newPostImageInput.value.trim(),
   };
+
   if (!inputValues.name || !inputValues.link) return;
+
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+
   closeModal(newPostModal);
   newPostForm.reset();
 });
 
-newPostCloseBtn.addEventListener("click", () => closeModal(newPostModal));
+newPostCloseBtn.addEventListener("click", () => {
+  closeModal(newPostModal);
+});
 
-previewModalCloseBtn.addEventListener("click", () => closeModal(previewModal));
+previewModalCloseBtn.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
