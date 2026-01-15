@@ -62,10 +62,13 @@ const previewCaption = previewModal.querySelector(".modal__caption");
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+
+  document.addEventListener("keydown", escClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", escClose);
 }
 
 const modals = document.querySelectorAll(".modal");
@@ -77,6 +80,12 @@ modals.forEach(function (modal) {
 function handleClickClose(event) {
   if (event.target.classList.contains("modal")) {
     closeModal(event.target);
+  }
+}
+
+function escClose(event) {
+  if (event.key == "Escape") {
+    closeModal(document.querySelector(".modal_is-opened"));
   }
 }
 
