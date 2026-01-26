@@ -1,21 +1,21 @@
-# Spots 
+# Spots
 
 Image sharing Website
 
-## Description 
+## Description
 
-Spots is a photo-sharing website where users can edit their profiles and add new posts. The website is easy to use and it works on all screens. 
+Spots is a photo-sharing website where users can edit their profiles and add new posts. The website is easy to use and it works on all screens.
 
-## Tech Stack 
+## Tech Stack
 
 - HTML
 - CSS
-- Responsive Design 
+- Responsive Design
 
-## Deployment 
+## Deployment
 
-This webpage is deployed to GitHub Pages 
+This webpage is deployed to GitHub Pages
 
 - [Deployment link:](https://sebasco-coder.github.io/se_project_spots/)
 
-- [Project Pitch Video: ](https://www.loom.com/share/bbf608d0f0764643a53f65bec6e40553)
+- [Project Pitch Video: ](https://www.loom.com/share/0e90774a96494c43a69b582ae5446f78)
